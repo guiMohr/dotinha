@@ -1,0 +1,38 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{ item.name }}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <div class="item-profile" text-center #profilePic [style.background-image]="'url(' + item.profilePic + ')'">
+  </div>
+
+  <div class="item-detail" padding>
+    <h2>{{item.name}}</h2>
+    <p>{{item.about}}</p>
+    <h3>Attributos</h3>
+    <span *ngFor="let attributes of item.attributes">
+      <ion-img width="40" height="40" src="{{ attributes.attributeIcon }}"></ion-img>
+      <span> {{ attributes.attributeName }} </span>
+    </span>
+    <h3>Skills</h3>
+    <span>
+      <ion-item-group col-auto *ngFor="let skills of item.skills">
+        <ion-img width="60" height="60" src="{{ skills.skillIcon }}"></ion-img>
+        <span> {{ skills.skillName }} </span>
+      </ion-item-group>
+    </span>
+    <h3>Counter Picks</h3>
+    <span>
+      <ion-item-group col-auto *ngFor="let counters of item.counters">
+        <ion-img width="100" height="65" src="{{ counters.counterIcon }}"></ion-img>
+        <span> {{ counters.counterName }} </span>
+      </ion-item-group>
+    </span>
+  </div>
+
+</ion-content>
