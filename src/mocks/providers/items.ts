@@ -31,7 +31,10 @@ export class Items {
                     { "skillName":"Tempo Emprestado", "skillIcon": "assets/dota2/Borrowed_Time_icon.png"}
                 ],
                 "counters": [
-                    { "counterName":"Ancient Apparition", "counterIcon": "assets/dota2/Ancient_Apparition_icon.png"},
+                    { "counterName":"Ancient Apparition", "counterIcon": "assets/dota2/Ancient_Apparition_icon.png" , "reason": [
+                        {"reasonIcon": "assets/dota2/Ice_Blast_icon.png", "reasonDesc": "O debuff de Ice Blast impede Abaddon de curar-se durante o Borrowed Time."}
+                        ]
+                    },
                     { "counterName":"Doom", "counterIcon": "assets/dota2/Doom_icon.png"},
                     { "counterName":"Lina", "counterIcon": "assets/dota2/Lina_icon.png"}
                 ]
